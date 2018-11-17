@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="expenseReport" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.ReportExpense">
+   <children>
+      <JFXButton fx:id="btnLogout" buttonType="RAISED" layoutX="369.0" layoutY="335.0" onAction="#genReportExpense" prefHeight="34.0" prefWidth="134.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate Report" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXDatePicker fx:id="startDate" layoutX="82.0" layoutY="53.0" prefHeight="25.0" prefWidth="112.0" />
+      <JFXDatePicker fx:id="endDate" layoutX="217.0" layoutY="54.0" prefHeight="25.0" prefWidth="112.0" />
+      <Label layoutX="194.0" layoutY="56.0" text="To">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSort" buttonType="RAISED" layoutX="480.0" layoutY="48.0" onAction="#sort" prefHeight="34.0" prefWidth="51.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Sort" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="41.0" layoutY="55.0" prefHeight="20.0" prefWidth="41.0" text="Date :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblExpenses" layoutX="35.0" layoutY="92.0" prefHeight="224.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="colTask" prefWidth="166.0" text="Task" />
+            <TableColumn fx:id="colPayment" prefWidth="91.0" text="Payment" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblExpenseDetail" layoutX="402.0" layoutY="150.0" style="-fx-font-weight: bold; -fx-font-family: Arial; -fx-font-size: 16px;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbSelectTask" labelFloat="true" layoutX="360.0" layoutY="54.0" prefHeight="25.0" prefWidth="101.0" promptText="select task" />
+      <JFXButton fx:id="btnLogout2" buttonType="RAISED" layoutX="506.0" layoutY="335.0" onAction="#back" prefHeight="34.0" prefWidth="87.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="226.0" layoutY="14.0" prefHeight="34.0" prefWidth="148.0" style="-fx-font-weight: bold;" text="Report Expense">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

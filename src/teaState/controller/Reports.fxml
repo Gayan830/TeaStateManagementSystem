@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reports" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.Reports">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="224.0" onAction="#generatePayment" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate Payment " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="167.0" onAction="#genExpenseReport" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate Expense Report" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="107.0" onAction="#genIncomeReport" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate Income Report" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="244.0" layoutY="23.0" text="Reports">
+         <font>
+            <Font name="SansSerif Regular" size="32.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="490.0" layoutY="327.0" onAction="#cancel" prefHeight="34.0" prefWidth="96.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="staffPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.StaffPanel">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="165.0" onAction="#addTaskDetails" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Add Task Detail" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="108.0" onAction="#UpdateEmployee" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Update Employee Details" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="175.0" layoutY="223.0" onAction="#genReports" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate reports" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="501.0" layoutY="319.0" onAction="#logout" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="222.0" layoutY="22.0" text="Staff Panel">
+         <font>
+            <Font name="SansSerif Regular" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

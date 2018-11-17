@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_teastatemanagementsystem" default="compile.module.teastatemanagementsystem">
+  <dirname property="module.teastatemanagementsystem.basedir" file="${ant.file.module_teastatemanagementsystem}"/>
+  
+  <property name="module.jdk.home.teastatemanagementsystem" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.teastatemanagementsystem" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.teastatemanagementsystem" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.teastatemanagementsystem" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="teastatemanagementsystem.output.dir" value="${module.teastatemanagementsystem.basedir}/out/production/TeaStateManagementSystem"/>
+  <property name="teastatemanagementsystem.testoutput.dir" value="${module.teastatemanagementsystem.basedir}/out/test/TeaStateManagementSystem"/>
+  
+  <path id="teastatemanagementsystem.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="teastatemanagementsystem.module.production.classpath">
+    <path refid="${module.jdk.classpath.teastatemanagementsystem}"/>
+    <path refid="library.mysql-connector-java-5.1.46.classpath"/>
+    <path refid="library.jfoenix-8.0.5.classpath"/>
+    <path refid="library.itextpdf-5.5.13.classpath"/>
+  </path>
+  
+  <path id="teastatemanagementsystem.runtime.production.module.classpath">
+    <pathelement location="${teastatemanagementsystem.output.dir}"/>
+    <path refid="library.mysql-connector-java-5.1.46.classpath"/>
+    <path refid="library.jfoenix-8.0.5.classpath"/>
+    <path refid="library.itextpdf-5.5.13.classpath"/>
+  </path>
+  
+  <path id="teastatemanagementsystem.module.classpath">
+    <path refid="${module.jdk.classpath.teastatemanagementsystem}"/>
+    <pathelement location="${teastatemanagementsystem.output.dir}"/>
+    <path refid="library.mysql-connector-java-5.1.46.classpath"/>
+    <path refid="library.jfoenix-8.0.5.classpath"/>
+    <path refid="library.itextpdf-5.5.13.classpath"/>
+  </path>
+  
+  <path id="teastatemanagementsystem.runtime.module.classpath">
+    <pathelement location="${teastatemanagementsystem.testoutput.dir}"/>
+    <pathelement location="${teastatemanagementsystem.output.dir}"/>
+    <path refid="library.mysql-connector-java-5.1.46.classpath"/>
+    <path refid="library.jfoenix-8.0.5.classpath"/>
+    <path refid="library.itextpdf-5.5.13.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.teastatemanagementsystem">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.teastatemanagementsystem">
+    <patternset refid="excluded.from.module.teastatemanagementsystem"/>
+  </patternset>
+  
+  <path id="teastatemanagementsystem.module.sourcepath">
+    <dirset dir="${module.teastatemanagementsystem.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.teastatemanagementsystem" depends="compile.module.teastatemanagementsystem.production,compile.module.teastatemanagementsystem.tests" description="Compile module TeaStateManagementSystem"/>
+  
+  <target name="compile.module.teastatemanagementsystem.production" depends="register.custom.compilers" description="Compile module TeaStateManagementSystem; production classes">
+    <mkdir dir="${teastatemanagementsystem.output.dir}"/>
+    <javac2 destdir="${teastatemanagementsystem.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.teastatemanagementsystem}/javac">
+      <compilerarg line="${compiler.args.teastatemanagementsystem}"/>
+      <bootclasspath refid="teastatemanagementsystem.module.bootclasspath"/>
+      <classpath refid="teastatemanagementsystem.module.production.classpath"/>
+      <src refid="teastatemanagementsystem.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.teastatemanagementsystem"/>
+    </javac2>
+    
+    <copy todir="${teastatemanagementsystem.output.dir}">
+      <fileset dir="${module.teastatemanagementsystem.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.teastatemanagementsystem.tests" depends="register.custom.compilers,compile.module.teastatemanagementsystem.production" description="compile module TeaStateManagementSystem; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.teastatemanagementsystem" description="cleanup module">
+    <delete dir="${teastatemanagementsystem.output.dir}"/>
+    <delete dir="${teastatemanagementsystem.testoutput.dir}"/>
+  </target>
+</project>

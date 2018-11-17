@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="taskDetails" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.TaskDetails">
+   <children>
+      <JFXDatePicker fx:id="date" layoutX="154.0" layoutY="113.0" prefHeight="27.0" prefWidth="292.0" promptText="Date " />
+      <JFXButton buttonType="RAISED" layoutX="308.0" layoutY="310.0" onAction="#add" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Add" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXTextField fx:id="hoursWorked" labelFloat="true" layoutX="325.0" layoutY="205.0" prefHeight="27.0" prefWidth="119.0" promptText="Hours Worked">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="payRate" labelFloat="true" layoutX="154.0" layoutY="205.0" prefHeight="27.0" prefWidth="141.0" promptText="Pay Rate">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="selectEmp" labelFloat="true" layoutX="154.0" layoutY="64.0"  prefHeight="34.0" prefWidth="292.0" promptText="Select Employee " />
+      <JFXButton buttonType="RAISED" layoutX="401.0" layoutY="310.0" onAction="#reset" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Reset" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="493.0" layoutY="310.0" onAction="#cancel" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXComboBox fx:id="taskType" layoutX="154.0" layoutY="157.0" onAction="#getSelectionModel" prefHeight="27.0" prefWidth="292.0" promptText="Task Description" />
+      <JFXTextField fx:id="leafWeight" labelFloat="true" layoutX="154.0" layoutY="250.0" prefHeight="27.0" prefWidth="292.0" promptText="Plucked Tea Leaf Weight">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="207.0" layoutY="14.0" text="Task Details">
+         <font>
+            <Font name="SansSerif Regular" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Payment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.Payment">
+   <children>
+      <TableView fx:id="tblPayment" layoutX="36.0" layoutY="81.0" prefHeight="234.0" prefWidth="543.0">
+        <columns>
+            <TableColumn fx:id="date" text="Date" />
+            <TableColumn fx:id="details" prefWidth="97.0" text="Detail" />
+            <TableColumn fx:id="payrate" prefWidth="89.0" text="Payrate" />
+            <TableColumn fx:id="hoursWorked" prefWidth="128.0" text="WHrs/LWeight" />
+            <TableColumn fx:id="payment" prefWidth="67.0" text="Payment" />
+            <TableColumn fx:id="status" prefWidth="79.6666259765625" text="Status" />
+        </columns>
+         <effect>
+            <Glow level="0.0">
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </TableView>
+      <JFXComboBox fx:id="selectWorker" labelFloat="true" layoutX="44.0" layoutY="37.0" onAction="#getSelectionModel" prefHeight="25.0" prefWidth="179.0" promptText="Select Worker" />
+      <Label layoutX="258.0" layoutY="7.0" prefHeight="30.0" prefWidth="85.0" style="-fx-font-weight: bold; -fx-font-size: 20px;" text="Payment">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbStatus" layoutX="481.0" layoutY="37.0" onAction="#getSelectionModel" prefHeight="25.0" prefWidth="96.0" promptText="None" />
+      <JFXButton fx:id="generatePayment" buttonType="RAISED" layoutX="326.0" layoutY="327.0" onAction="#generatePayment" prefHeight="34.0" prefWidth="154.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate Payment" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnPopulate" buttonType="RAISED" layoutX="197.0" layoutY="327.0" onAction="#populate" prefHeight="34.0" prefWidth="122.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Populate Table" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="490.0" layoutY="327.0" onAction="#cancel" prefHeight="34.0" prefWidth="96.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbYear" focusColor="#009688" layoutX="243.0" layoutY="38.0" onAction="#getSelectionModel" promptText="Year">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="2013" />
+               <String fx:value="2014" />
+               <String fx:value="2015" />
+               <String fx:value="2016" />
+               <String fx:value="2017" />
+               <String fx:value="2018" />
+               <String fx:value="2019" />
+               <String fx:value="2020" />
+               <String fx:value="2021" />
+               <String fx:value="2022" />
+               <String fx:value="2023" />
+               <String fx:value="2024" />
+               <String fx:value="2025" />
+               <String fx:value="2026" />
+               <String fx:value="2027" />
+            </FXCollections>
+         </items>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbMonth" focusColor="#009688" layoutX="351.0" layoutY="38.0" onAction="#getSelectionModel" prefHeight="25.0" prefWidth="104.0" promptText="Month">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="January" />
+               <String fx:value="February" />
+               <String fx:value="March" />
+               <String fx:value="April" />
+               <String fx:value="May" />
+               <String fx:value="June" />
+               <String fx:value="July" />
+               <String fx:value="August" />
+               <String fx:value="September" />
+               <String fx:value="October" />
+               <String fx:value="November" />
+               <String fx:value="December" />
+            </FXCollections>
+         </items>
+      </JFXComboBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.AdminPanel">
+   <children>
+      <JFXButton fx:id="btnAddTask" buttonType="RAISED" layoutX="176.0" layoutY="201.0" onAction="#addTaskDetails" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Add Task Detail" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateEmp" buttonType="RAISED" layoutX="176.0" layoutY="144.0" onAction="#updateEmp" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Update Employee Details" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnAddEmp" buttonType="RAISED" layoutX="176.0" layoutY="84.0" onAction="#addEmp" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Add New Employee" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnGenerateReport" buttonType="RAISED" layoutX="176.0" layoutY="259.0" onAction="#genReport" prefHeight="44.0" prefWidth="251.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Generate Report" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="btnLogout" buttonType="RAISED" layoutX="501.0" layoutY="319.0" onAction="#logout" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="211.0" layoutY="25.0" text="Admin Panel">
+         <font>
+            <Font name="SansSerif Regular" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

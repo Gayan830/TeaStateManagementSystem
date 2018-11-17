@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="editLogin" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teaState.controller.EditLogin">
+   <children>
+      <JFXButton fx:id="btnChange" buttonType="RAISED" layoutX="410.0" layoutY="335.0" onAction="#change" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Change" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="108.0" layoutX="109.0" layoutY="57.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+      <JFXTextField fx:id="userName" labelFloat="true" layoutX="173.0" layoutY="76.0" prefHeight="25.0" prefWidth="237.0" promptText="Current Username">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="173.0" layoutY="117.0" prefHeight="31.0" prefWidth="237.0" promptText="Current Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="155.0" layoutX="109.0" layoutY="175.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+      <JFXPasswordField fx:id="newPassword" labelFloat="true" layoutX="173.0" layoutY="188.0" prefHeight="31.0" prefWidth="237.0" promptText="New Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="confirmPassword" labelFloat="true" layoutX="167.0" layoutY="237.0" prefHeight="31.0" prefWidth="237.0" promptText="Confirm Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="newUserName" labelFloat="true" layoutX="173.0" layoutY="291.0" prefHeight="25.0" prefWidth="237.0" promptText="New Username">
+         <font>
+            <Font name="SansSerif Regular" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="214.0" layoutY="14.0" text="Edit Login">
+         <font>
+            <Font name="SansSerif Regular" size="32.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnClose" buttonType="RAISED" layoutX="501.0" layoutY="335.0" onAction="#back" prefHeight="34.0" prefWidth="85.0" ripplerFill="#75c0b9" style="-fx-background-color: #009688;" text="Back" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.2" />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>
